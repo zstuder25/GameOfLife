@@ -1,4 +1,5 @@
 import exceptions.InvalidArgumentsException;
+import objects.Grid;
 
 import java.io.File;
 
@@ -13,5 +14,6 @@ public class GameOfLife {
         }
         String gridFilePath = args[0];
         File gridFile = new File(gridFilePath);
+        Grid grid = new Grid(gridFile);
     }
 }
