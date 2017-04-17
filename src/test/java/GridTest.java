@@ -25,8 +25,15 @@ public class GridTest {
     @Test
     public void testPrintCells() throws FileNotFoundException{
         File file = new File("C:\\Users\\zmans\\IdeaProjects\\GameOfLife\\src\\test\\resources\\gridConstuctor.txt");
-        String testFile = new Scanner(file).useDelimiter("\\Z").next();
+        String testFile = new Scanner(file).useDelimiter("\\Z").next().replaceAll("\\s", "");
         Grid grid = new Grid(file);
-        assertEquals(testFile, grid.printCells());
+        assertEquals(testFile, grid.printCells().replaceAll("\\s",""));
+    }
+
+    @Test
+    public void testNextGeneration()throws FileNotFoundException{
+        Grid grid = new Grid(new File(":\\Users\\zmans\\IdeaProjects\\GameOfLife\\src\\test\\resources\\gridConstuctor.txt"));
+        grid.nextGeneration();
+
     }
 }

@@ -16,5 +16,10 @@ public class GameOfLife {
         String gridFilePath = args[0];
         File gridFile = new File(gridFilePath);
         Grid grid = new Grid(gridFile);
+        System.out.println("Current Generation:");
+        System.out.println(grid.printCells());
+        grid.nextGeneration();
+        System.out.println("Next Generation:");
+        System.out.println(grid.printCells());
     }
 }
