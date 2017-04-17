@@ -6,6 +6,10 @@ package objects;
 public class Cell {
     private boolean lifeStatus;
 
+    public Cell(boolean lifeStatus){
+        this.lifeStatus = lifeStatus;
+    }
+
     public boolean isLifeStatus() {
         return lifeStatus;
     }
