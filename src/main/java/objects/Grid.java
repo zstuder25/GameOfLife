@@ -2,6 +2,7 @@ package objects;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -209,6 +210,48 @@ public class Grid {
         }
         processNextGeneration();
     }
+
+    /**
+     * Optional Random Grid Generator created for use in testing with
+     * columns and rows passed into for the dimensions
+     * @param c
+     *      the number of columns
+     * @param r
+     *      the number of rows
+     * @return
+     *      the string representation of the grid with the alive and dead cells
+     *      pseudo-randomly generated
+     */
+    public static String randomGridGenerator(int c, int r){
+        String grid = "";
+        Random ran = new Random();
+        for (int j = 0; j < r; j++) {
+            for (int i = 0; i < c; i++) {
+                if(ran.nextInt() < 25){
+                    grid += ".";
+                }else{
+                    grid += "O";
+                }
+            }
+            grid += "\n";
+        }
+        return grid;
+    }
+
+    /**
+     * The overloaded method of randomGridGenerator to allow for
+     * pseudo-randomly generated dimensions as well
+     * @return
+     *      the string representation of the grid with the alive and dead cells
+     *      pseudo-randomly generated
+     */
+    public static String randomGridGenerator(){
+        Random ran = new Random();
+        int c = ran.nextInt(50);
+        int r = ran.nextInt(50);
+        return randomGridGenerator(c, r);
+    }
+
 
     @Override
     public String toString() {

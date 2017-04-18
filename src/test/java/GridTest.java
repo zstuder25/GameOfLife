@@ -15,7 +15,7 @@ public class GridTest {
 
     @Test
     public void testGridConstructor() throws FileNotFoundException{
-        Grid grid = new Grid(new File("C:\\Users\\zmans\\IdeaProjects\\GameOfLife\\src\\test\\resources\\gridConstuctor.txt"));
+        Grid grid = new Grid(new File("src\\test\\resources\\grid1.txt"));
         assertEquals(grid.getColumns(), 8);
         assertEquals(grid.getRows(), 6);
         assertTrue(grid.getCells()[2][1].isLifeStatus());
@@ -24,7 +24,7 @@ public class GridTest {
 
     @Test
     public void testPrintCells() throws FileNotFoundException{
-        File file = new File("C:\\Users\\zmans\\IdeaProjects\\GameOfLife\\src\\test\\resources\\gridConstuctor.txt");
+        File file = new File("src\\test\\resources\\grid1.txt");
         String testFile = new Scanner(file).useDelimiter("\\Z").next().replaceAll("\\s", "");
         Grid grid = new Grid(file);
         assertEquals(testFile, grid.printCells().replaceAll("\\s",""));
@@ -32,7 +32,7 @@ public class GridTest {
 
     @Test
     public void testNextGeneration()throws FileNotFoundException{
-        Grid grid = new Grid(new File(":\\Users\\zmans\\IdeaProjects\\GameOfLife\\src\\test\\resources\\gridConstuctor.txt"));
+        Grid grid = new Grid(new File("src\\test\\resources\\grid1.txt"));
         grid.nextGeneration();
 
     }
