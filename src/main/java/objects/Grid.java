@@ -138,6 +138,8 @@ public class Grid {
             //For Dead Cells
             if(neighborsAlive == 3){
                 cell.setNextGenLifeStatus(true);
+            }else{
+                cell.setNextGenLifeStatus(false);
             }
         }
     }
