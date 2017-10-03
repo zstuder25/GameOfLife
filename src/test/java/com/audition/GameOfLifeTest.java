@@ -1,4 +1,6 @@
-import exceptions.InvalidArgumentsException;
+package com.audition;
+
+import com.audition.exceptions.InvalidArgumentsException;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;

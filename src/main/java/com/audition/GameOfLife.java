@@ -1,5 +1,7 @@
-import exceptions.InvalidArgumentsException;
-import objects.Grid;
+package com.audition;
+
+import com.audition.exceptions.InvalidArgumentsException;
+import com.audition.objects.Grid;
 
 import java.io.File;
 import java.io.FileNotFoundException;

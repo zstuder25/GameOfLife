@@ -1,5 +1,5 @@
-import objects.Cell;
-import objects.Grid;
+package com.audition.objects;
+
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package objects;
+package com.audition.objects;
 
 /**
  * Created by zmans on 4/15/2017.
